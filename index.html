@@ -80,7 +80,8 @@ nav{height:72px;display:flex;align-items:center;justify-content:space-between;ga
 .book-float{position:fixed;right:18px;bottom:calc(88px + env(safe-area-inset-bottom,0px));z-index:40;padding:10px 15px;border:1px solid rgba(115,224,255,.55);background:rgba(5,5,5,.92);color:var(--c2);font-size:13px;font-weight:700;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .book-float:hover{background:#10191d;border-color:var(--c2)}
 @media(max-width:900px){.book-strip{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){.nav-book{padding:10px 13px;font-size:13px}.book-strip{padding:18px}.book-strip .btn{width:100%;justify-content:center}.book-float{right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+@media(max-width:560px){nav{gap:8px}.logo{font-size:26px;letter-spacing:-2px}.nav-book,.nav-whatsapp{display:inline-flex;padding:9px 10px;font-size:12px;white-space:nowrap}.nav-book{order:2}.nav-whatsapp{order:3}.book-strip{padding:18px}.book-strip .btn{width:100%;justify-content:center}.book-float{right:14px;bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
+@media(max-width:380px){nav{gap:6px}.logo{font-size:23px}.nav-book,.nav-whatsapp{padding:8px 7px;font-size:11px}}
 
 .btn svg{width:20px;height:20px;fill:currentColor}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%,100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
@@ -236,7 +237,7 @@ html,body{max-width:100%;overflow-x:clip}
 <header id="hd"><div class="wrap"><nav aria-label="Primary">
 <a class="logo" href="#top" aria-label="Greystudio home"><b>Grey</b>studio.</a>
 <div class="nl"><a href="#services">Services</a><a href="#mike">The Fixer</a><a href="#story">Story</a><a href="#founder">Founder</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div>
-<a class="btn o nav-whatsapp" href="https://wa.me/916281256601?text=Hi%20Greystudio%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">WhatsApp Us</a><a class="btn p nav-book" href="/book" aria-label="Book a free 30-minute consultation">Book a Call <span aria-hidden="true">↗</span></a>
+<a class="btn p nav-book" href="/book" aria-label="Book a free 30-minute consultation">Book a Call <span aria-hidden="true">↗</span></a><a class="btn o nav-whatsapp" href="https://wa.me/916281256601?text=Hi%20Greystudio%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">WhatsApp Us</a>
 </nav></div></header>
 
 <main id="top">
