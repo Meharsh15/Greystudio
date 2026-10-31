@@ -1,0 +1,34 @@
+name: Fix GreyStudio booking and mobile CTAs
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: greystudio-booking-fix
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - name: Apply focused repairs
+        run: python3 scripts/fix_booking_and_mobile.py
+      - name: Commit repairs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html book/index.html
+          if git diff --cached --quiet; then
+            echo "No changes required."
+          else
+            git commit -m "Fix booking fallback and mobile CTA layout"
+            git push origin HEAD:main
+          fi
