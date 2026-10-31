@@ -1,0 +1,32 @@
+# GreyStudio
+
+> GreyStudio is a creative and digital studio based in Hyderabad, Telangana, India.
+
+## Website
+- Homepage: https://www.greystudio.online/
+- Dedicated booking page: https://www.greystudio.online/book
+
+## Book a consultation
+- Book a free 30-minute consultation: https://www.greystudio.online/book
+- The existing booking page contains the Calendly scheduling embed.
+- The homepage links to the dedicated booking page and does not duplicate the Calendly widget.
+
+## Contact
+- WhatsApp: https://wa.me/916281256601
+- Phone: +91 62812 56601
+
+## Services
+- Advertising
+- Branding
+- Graphic design
+- Photography
+- Publicity and PR
+- Digital marketing
+- Website and app development
+- Content creation
+
+## Location
+- Hyderabad, Telangana, India
+
+For project enquiries or consultation scheduling, use:
+https://www.greystudio.online/book
