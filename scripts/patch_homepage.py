@@ -70,7 +70,7 @@ for path in FILES:
     for old, new, label in REPLACEMENTS:
         source = apply_once(source, old, new, label)
 
-    if "window.__greystudio3dReady=()" not in source:
+    if "window.__greystudio3dReady=()=>{ready=true;" not in source:
         marker = '</script>\n<script type="application/ld+json">'
         source = apply_once(source, marker, WATCHDOG, "module-load watchdog")
 
