@@ -28,6 +28,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 fill=%27%23050505%27/%3E%3Ctext x=%2716%27 y=%2725%27 font-size=%2726%27 text-anchor=%27middle%27 fill=%27%2335c9ff%27%3E%E2%9C%B1%3C/text%3E%3C/svg%3E">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}</script>
+<script>
+(()=>{let ready=false;const fail=()=>{if(!ready)document.documentElement.classList.add("no3d")};window.__greystudio3dReady=()=>{ready=true;document.documentElement.classList.remove("no3d")};window.addEventListener("error",e=>{if(e.target&&e.target.tagName==="SCRIPT"&&e.target.type==="module")fail()},true);window.addEventListener("unhandledrejection",fail);setTimeout(fail,18000)})();
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"ProfessionalService","@id":"https://www.greystudio.online/#studio","name":"Greystudio.","url":"https://www.greystudio.online/","telephone":"+91-6281256601","description":"Creative studio offering advertising, branding, graphic design, photography, publicity and PR, digital marketing, website and app development, and content creation in Hyderabad.","address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500077","addressCountry":"IN"},"areaServed":{"@type":"City","name":"Hyderabad"},
@@ -103,7 +106,7 @@ h1 b{font-weight:700}
 .mt{display:flex;width:max-content;animation:mq 30s linear infinite;gap:40px;font-size:clamp(20px,3vw,32px);font-weight:300;color:#cfd3d6;white-space:nowrap}
 .mt span:nth-child(even){color:var(--c1)}
 @keyframes mq{to{transform:translateX(-50%)}}
-section{padding:clamp(64px,7vw,92px) 0;border-bottom:1px solid var(--line);position:relative;z-index:1}
+section{padding:clamp(54px,5.5vw,76px) 0;border-bottom:1px solid var(--line);position:relative;z-index:1}
 .k{color:var(--c2);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
 h2{font-size:clamp(34px,5.4vw,70px);line-height:1;letter-spacing:-.05em;margin-top:10px;font-weight:300}
 h2 b{font-weight:700}
@@ -149,7 +152,7 @@ footer{padding:30px 0 40px;color:#9da1a5;font-size:13px;position:relative;z-inde
 .rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease;transition-delay:var(--d,0s)}
 .rv.in{opacity:1;transform:none}
 @media(max-width:900px){.nl{display:none}.hg,.story,.cg{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.sh{display:block}.sh p{margin-top:16px}.flower{width:min(300px,70vw)}}
-@media(max-width:560px){section{padding:56px 0}.grid,.steps{grid-template-columns:1fr}.sv{min-height:230px}.acts .btn{width:100%;justify-content:center}.stat b{font-size:30px}.nav-whatsapp{display:none}}
+@media(max-width:560px){section{padding:44px 0}.grid,.steps{grid-template-columns:1fr}.sv{min-height:230px}.acts .btn{width:100%;justify-content:center}.stat b{font-size:30px}.nav-whatsapp{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 
 
@@ -158,24 +161,24 @@ footer{padding:30px 0 40px;color:#9da1a5;font-size:13px;position:relative;z-inde
 #character3d canvas{display:block;width:100%!important;height:100%!important}
 main,footer{position:relative;z-index:2}
 .hero{position:relative;z-index:2}
-.stage{position:relative;width:100%;min-height:340px;pointer-events:none}
+.stage{position:relative;width:100%;min-height:270px;pointer-events:none}
 .stage:after{content:"";display:none;position:absolute;left:50%;bottom:2%;width:86%;height:18%;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(53,201,255,.42),transparent 70%);opacity:0;transition:opacity 1s}
 .has3d .stage:after{opacity:1}
 .flower{min-height:380px}
 .sh .stage{width:min(380px,38%);min-height:290px;flex:none;margin-bottom:0}
 .faqg{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
-.cstage{min-height:250px;margin-bottom:34px}
+.cstage{min-height:210px;margin-bottom:22px}
 .story .stage{margin-top:18px;min-height:300px}
 .sv.is-active{border-color:rgba(115,224,255,.55);box-shadow:inset 0 0 40px rgba(53,201,255,.12),0 0 30px rgba(53,201,255,.08)}
 html,body{max-width:100%;overflow-x:clip}
-@media(max-width:900px){.sh .stage{display:none}.faqg{grid-template-columns:1fr;gap:12px}.stage{min-height:250px}.story .stage{min-height:250px;margin-top:8px}.cstage{min-height:240px;margin-bottom:24px}}
+@media(max-width:900px){.sh .stage{display:none}.faqg{grid-template-columns:1fr;gap:12px}.stage{min-height:200px}.story .stage{min-height:200px;margin-top:8px}.cstage{min-height:190px;margin-bottom:18px}}
 .no3d .stage{display:none!important}.no3d .flower{min-height:0}
 @media(prefers-reduced-motion:reduce){#character3d{transition:opacity .4s!important}}
 
 /* ===== The Fixer (Mike) section ===== */
 #mike{background:radial-gradient(ellipse 45% 40% at 76% 20%,rgba(53,201,255,.15),transparent 70%)}
 .mkhead{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
-.mkhead .stage{min-height:420px}
+.mkhead .stage{min-height:320px}
 .mkhead .lead b{color:#fff;font-weight:600}
 .mkq{margin-top:26px;padding:18px 22px;border-left:2px solid var(--c1);background:linear-gradient(90deg,rgba(53,201,255,.09),transparent);color:#e7eaec;font-size:clamp(16px,1.8vw,19px);line-height:1.45}
 .mkq small{display:block;margin-top:8px;color:var(--muted);font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
@@ -197,7 +200,7 @@ html,body{max-width:100%;overflow-x:clip}
 .chips span{border:1px solid var(--line);padding:9px 16px;font-size:13.5px;color:#d6dadd;background:rgba(7,7,7,.42)}
 .mkbring .acts{justify-content:center}
 .mkfine{margin-top:34px;text-align:center;font-size:11.5px;color:#7d8388;max-width:760px;margin-left:auto;margin-right:auto}
-@media(max-width:900px){.mkhead{grid-template-columns:1fr;gap:6px}.mkhead .stage{min-height:270px}.mkbeats{grid-template-columns:1fr;margin-top:64px}.mkrules{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.mkhead{grid-template-columns:1fr;gap:6px}.mkhead .stage{min-height:230px}.mkbeats{grid-template-columns:1fr;margin-top:64px}.mkrules{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.mkrules{grid-template-columns:1fr}}
 
 /* ===== Founder (redesign) ===== */
@@ -419,6 +422,7 @@ function measure(){
 
 // pure function of the scroll position -> targets (called every frame, no layout reads)
 function solve(s){
+  if(!stops.length||!stops[0]){tgt.op=0;return}
   const vh=vh0, m=s+vh/2;
   let i=0; while(i<stops.length-1 && m>=stops[i+1].yA) i++;
   const A=stops[i], B=stops[Math.min(i+1,stops.length-1)];
@@ -436,6 +440,8 @@ function solve(s){
   const fout=ss(clamp(((footY-s)/vh-.7)/.3,0,1));
   const fa=fTop-s, fb=fBot-s, fnd=1-ss(clamp((vh*.95-fa)/(vh*.3),0,1))*ss(clamp((fb-vh*.05)/(vh*.3),0,1));  // 0 while the Founder section is on screen
   tgt.op=lerp(A.op,B.op,t)*(1-.85*ss(clamp((raw-.12)/.28,0,1))*ss(clamp((.88-raw)/.28,0,1)))*fin*fout*fnd;
+  const activeRange=m>=S.top+vh*.12 && s<footY-vh*.7 && !(fa<vh*.95 && fb>vh*.05);
+  if(activeRange)tgt.op=Math.max(tgt.op,mobile()?.88:1);
   // highlight the service card nearest the middle (cached positions, no layout reads)
   if(s+vh>svcTop && s<svcBot){let best=0,bd=1e9;for(let k=0;k<cardMid.length;k++){const d=Math.abs(cardMid[k]-m);if(d<bd){bd=d;best=k}}
     if(best!==activeCard){if(cards[activeCard])cards[activeCard].classList.remove('is-active');cards[best].classList.add('is-active');activeCard=best}}
@@ -514,6 +520,7 @@ async function init(){
   const box=new THREE.Box3().setFromObject(model), c=box.getCenter(new THREE.Vector3()), h=box.getSize(new THREE.Vector3()).y;
   model.position.sub(c); const pivot=new THREE.Group(); pivot.add(model); pivot.scale.setScalar(1/h); group.add(pivot);
   document.documentElement.classList.add('has3d');
+  window.__greystudio3dReady&&window.__greystudio3dReady();
   measure(); start();
 }
 function boot(){const go=()=>init().catch(e=>{console.warn('Greystudio 3D unavailable, static fallback.',e);document.documentElement.classList.add('no3d');dispose()});
