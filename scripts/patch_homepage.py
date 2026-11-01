@@ -109,7 +109,7 @@ def patch(path):
     # SEO metadata and machine-readable agency/service context for search and answer engines.
     description = "Greystudio is a Hyderabad creative and digital agency delivering cinematic documentaries, advertising, branding, photography, publicity, digital marketing, website development and content creation."
     if '<meta name="description"' in source:
-        source = re.sub(r'<meta\s+name=["\']description["\'][^>]*>', '<meta name="description" content="' + description + '">', source, count=1, flags=re.I)
+        source = re.sub(r"<meta\s+name=['\"]description['\"][^>]*>", '<meta name="description" content="' + description + '">', source, count=1, flags=re.I)
     else:
         source = replace_once(source, "</head>", '<meta name="description" content="' + description + '">\n</head>', "SEO meta description")
     canonical = '<link rel="canonical" href="https://www.greystudio.online/">'
