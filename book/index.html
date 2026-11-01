@@ -32,8 +32,9 @@ header{padding:28px 0}
 h1{font-size:clamp(36px,7vw,72px);line-height:1.02;letter-spacing:-2px;font-weight:300;margin:14px 0 16px}
 h1 b{font-weight:700}
 .lead{color:var(--muted);font-size:18px;max-width:640px;margin:0 0 32px}
-.bookbox{border:1px solid var(--line);background:rgba(0,0,0,.35);overflow:hidden;min-height:700px}
-.bookbox .calendly-inline-widget{min-width:320px;height:700px}
+.bookbox{border:1px solid var(--line);background:#000;overflow:hidden;min-height:700px}
+.bookbox .calendly-inline-widget{min-width:320px;height:700px;background:#000!important}
+.bookbox .calendly-inline-widget iframe{background:#000!important;color-scheme:dark}
 .bookfallback{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 26px;border-top:1px solid var(--line);background:rgba(53,201,255,.06)}
 .bookfallback p{color:var(--muted);margin:0}
 .bookfallback .btn{white-space:nowrap}
