@@ -33,19 +33,16 @@ h1{font-size:clamp(36px,7vw,72px);line-height:1.02;letter-spacing:-2px;font-weig
 h1 b{font-weight:700}
 .lead{color:var(--muted);font-size:18px;max-width:640px;margin:0 0 32px}
 .bookbox{border:1px solid var(--line);background:rgba(0,0,0,.35);overflow:hidden;min-height:700px}
-.bookfb{padding:28px;color:var(--muted)}
-.bookfb a{color:var(--c2);text-decoration:underline}
+.bookbox .calendly-inline-widget{min-width:320px;height:700px}
 .bookfallback{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:22px 26px;border-top:1px solid var(--line);background:rgba(53,201,255,.06)}
 .bookfallback p{color:var(--muted);margin:0}
 .bookfallback .btn{white-space:nowrap}
-.bookstatus{padding:12px 26px;color:var(--muted);font-size:13px}
-.bookstatus[hidden]{display:none}
 .acts{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 64px}
 .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;font-weight:700;font-size:15px;border:1px solid #fff;font-family:inherit;text-decoration:none;transition:.25s}
 .btn.w{background:var(--g);border-color:var(--g);color:#04210f}
 .btn.o{border-color:var(--line)}
 .btn:hover{transform:translateY(-2px)}
-@media(max-width:900px){.wrap{padding:0 16px}.logo{font-size:30px}.bookbox,.bookbox .calendly-inline-widget{min-height:760px}.bookbox .calendly-inline-widget{height:760px!important}.bookfallback{align-items:flex-start;flex-direction:column}.bookfallback .btn{width:100%;justify-content:center}}
+@media(max-width:900px){.wrap{padding:0 16px}.logo{font-size:30px}.bookbox,.bookbox .calendly-inline-widget{min-height:760px;height:760px!important}.bookfallback{align-items:flex-start;flex-direction:column}.bookfallback .btn{width:100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
 </style>
 </head>
@@ -57,14 +54,11 @@ h1 b{font-weight:700}
 <p class="lead">A 30-minute call to talk through your project, goals and timeline. Choose a slot that suits you.</p>
 <div class="bookbox" id="bookbox">
 <!-- Calendly inline widget begin -->
-<div class="calendly-inline-widget" data-url="https://calendly.com/greystudio-crew/30-min-meeting?hide_gdpr_banner=1&amp;background_color=0b0c0d&amp;text_color=f7f7f7&amp;primary_color=35c9ff" style="min-width:320px;height:700px;"></div>
-<div class="bookstatus" id="bookstatus" role="status" aria-live="polite">Loading available appointment times…</div>
-<script>
-(()=>{const status=document.getElementById("bookstatus");let loaded=false;const markLoaded=()=>{loaded=true;if(status){status.hidden=true}};window.addEventListener("message",event=>{if(event.origin==="https://calendly.com"&&event.data&&String(event.data.event||"").startsWith("calendly."))markLoaded()});const script=document.createElement("script");script.src="https://assets.calendly.com/assets/external/widget.js";script.async=true;script.onload=()=>{setTimeout(()=>{if(!loaded&&status)status.textContent="Calendar taking longer than expected? Use the direct booking link below.";},9000)};script.onerror=()=>{if(status)status.textContent="The embedded calendar could not load. Please use the direct booking link below."};document.head.appendChild(script);setTimeout(()=>{if(!loaded&&status)status.textContent="Having trouble viewing appointment times? Use the direct booking link below.";},12000)})();
-</script>
+<div class="calendly-inline-widget" data-url="https://calendly.com/greystudio/30-min-meeting?hide_gdpr_banner=1&amp;background_color=000000&amp;text_color=ffffff&amp;primary_color=1261cf" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <!-- Calendly inline widget end -->
 </div>
-<div class="bookfallback"><p>Calendar not appearing? Open Calendly directly to see live availability.</p><a class="btn w" href="https://calendly.com/greystudio-crew/30-min-meeting" target="_blank" rel="noopener">Open booking calendar ↗</a></div>
+<div class="bookfallback"><p>Calendar not appearing? Open Calendly directly to see live availability.</p><a class="btn w" href="https://calendly.com/greystudio/30-min-meeting?hide_gdpr_banner=1&amp;background_color=000000&amp;text_color=ffffff&amp;primary_color=1261cf" target="_blank" rel="noopener">Open booking calendar ↗</a></div>
 <div class="acts">
 <a class="btn w" href="https://wa.me/916281256601?text=Hi%20Greystudio%2C%20I%27d%20like%20to%20start%20a%20project." target="_blank" rel="noopener">Prefer WhatsApp? Message us</a>
 <a class="btn o" href="tel:+916281256601">Call 6281256601</a>
