@@ -106,6 +106,63 @@ def patch(path):
     source = source.replace("<h3>Photography</h3><p>Product, brand, business and campaign photography with a creative eye.</p>",
                             "<h3>Photography &amp; Cinematic Production</h3><p>Documentaries, brand films, advertisements and campaign photography.</p>", 1)
 
+    # SEO metadata and machine-readable agency/service context for search and answer engines.
+    description = "Greystudio is a Hyderabad creative and digital agency delivering cinematic documentaries, advertising, branding, photography, publicity, digital marketing, website development and content creation."
+    if '<meta name="description"' in source:
+        source = re.sub(r'<meta\\s+name=["\\']description["\\'][^>]*>', '<meta name="description" content="' + description + '">', source, count=1, flags=re.I)
+    else:
+        source = replace_once(source, "</head>", '<meta name="description" content="' + description + '">\\n</head>', "SEO meta description")
+    canonical = '<link rel="canonical" href="https://www.greystudio.online/">'
+    if 'rel="canonical"' not in source:
+        source = replace_once(source, "</head>", canonical + "\\n</head>", "canonical URL")
+    og = """<meta property="og:type" content="website">
+<meta property="og:site_name" content="Greystudio.">
+<meta property="og:title" content="Greystudio. | Creative &amp; Digital Agency in Hyderabad">
+<meta property="og:description" content="Cinematic production, advertising, branding and digital growth for ambitious businesses.">
+<meta property="og:url" content="https://www.greystudio.online/">
+<meta name="twitter:card" content="summary_large_image">"""
+    if 'property="og:title"' not in source:
+        source = replace_once(source, "</head>", og + "\\n</head>", "Open Graph and social metadata")
+    schema = """<script type="application/ld+json" id="greystudio-agency-schema">
+{
+  "@context": "https://schema.org",
+  "@type": ["ProfessionalService", "AdvertisingAgency"],
+  "name": "Greystudio.",
+  "url": "https://www.greystudio.online/",
+  "description": "Greystudio is a creative and digital agency in Hyderabad, India, offering cinematic documentary and advertising production, branding, photography, publicity and PR, digital marketing, website and app development, and content creation.",
+  "areaServed": [{"@type":"City","name":"Hyderabad"},{"@type":"AdministrativeArea","name":"Telangana"}],
+  "address": {"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500077","addressCountry":"IN"},
+  "knowsAbout": ["Cinematic documentary production","Advertising campaigns","Brand identity and branding","Commercial photography","Publicity and public relations","Digital marketing","Website development","App development","Content creation"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Creative and digital agency services",
+    "itemListElement": [
+      {"@type":"OfferCatalog","name":"Cinematic production and documentaries"},
+      {"@type":"OfferCatalog","name":"Advertising and campaign creative"},
+      {"@type":"OfferCatalog","name":"Branding and graphic design"},
+      {"@type":"OfferCatalog","name":"Photography and content creation"},
+      {"@type":"OfferCatalog","name":"Publicity and public relations"},
+      {"@type":"OfferCatalog","name":"Digital marketing"},
+      {"@type":"OfferCatalog","name":"Website and app development"}
+    ]
+  }
+}
+</script>"""
+    if 'id="greystudio-agency-schema"' not in source:
+        source = replace_once(source, "</head>", schema + "\\n</head>", "agency structured data")
+
+    # Keep the cinematic character visible on the opening view, then soften it behind the Services cards.
+    opacity_marker = "tgt.op=lerp(A.op,B.op,t)*(1-.85*ss(clamp((raw-.12)/.28,0,1))*ss(clamp((.88-raw)/.28,0,1)))*fin*fout*fnd;"
+    opacity_logic = opacity_marker + "\\n  // Hero: keep the character present from the first screen. Services: retain it as a subdued background layer.\\n  if(s < svcTop && s+vh>0) tgt.op=Math.max(tgt.op,.92);\\n  if(s+vh>svcTop && s<svcBot) tgt.op=Math.max(tgt.op,.34);"
+    if "retain it as a subdued background layer" not in source:
+        source = replace_once(source, opacity_marker, opacity_logic, "3D character hero and services visibility")
+    # Ensure service content sits above the softened character, without hiding the character entirely.
+    if "#services .wrap{position:relative;z-index:2}" not in source:
+        source = replace_once(source, "/* Integrated service photography — kept inside the original Services section */", "/* Integrated service photography — kept inside the original Services section */\\n#services .wrap{position:relative;z-index:2}\\n.stage{z-index:0}", "service foreground layering")
+    # Avoid duplicate 3D-ready callback calls from earlier patch passes.
+    ready_call = "window.__greystudio3dReady&&window.__greystudio3dReady();"
+    source = source.replace(ready_call + "\\n  " + ready_call, ready_call)
+
     if source != original:
         path.write_text(source, encoding="utf-8")
         return True
