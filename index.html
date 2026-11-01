@@ -230,28 +230,18 @@ html,body{max-width:100%;overflow-x:clip}
 @media(max-width:900px){.fdg{grid-template-columns:1fr;gap:44px}.fdp{max-width:360px}.fdchip{right:10px;top:12px}.fdstats{gap:8px}.fdstats div{padding:16px 12px}}
 @media(max-width:420px){.fdstats{grid-template-columns:1fr 1fr 1fr}.fdstats small{font-size:11px}}
 @media(prefers-reduced-motion:reduce){.fdchip{animation:none}}
-</style>
-<style id="gs-service-visuals-css">
-.gs-visual-services{position:relative;isolation:isolate;padding:clamp(64px,8vw,112px) max(24px,calc((100vw - 1240px)/2));background:linear-gradient(180deg,rgba(255,255,255,.015),rgba(255,255,255,0));overflow:hidden}
-.gs-visual-services:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,rgba(65,135,190,.12),transparent 58%);z-index:-1}
-.gs-vs-head{max-width:760px;margin:0 0 34px}
-.gs-vs-eyebrow{display:block;color:#9edfff;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:12px}
-.gs-vs-title{font-size:clamp(30px,4.3vw,54px);line-height:1.05;letter-spacing:-.045em;color:#f7f7f7;margin:0 0 12px}
-.gs-vs-copy{max-width:620px;color:rgba(245,248,250,.68);font-size:16px;line-height:1.65;margin:0}
-.gs-vs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-.gs-vs-card{position:relative;min-height:255px;border:1px solid rgba(255,255,255,.22);border-radius:18px;overflow:hidden;background:#111;isolation:isolate;opacity:0;transform:translateY(26px);filter:blur(5px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1),filter .85s ease,border-color .35s ease,box-shadow .35s ease}
-.gs-vs-card.is-visible{opacity:1;transform:translateY(0);filter:blur(0)}
-.gs-vs-card:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.04) 8%,rgba(0,0,0,.12) 36%,rgba(0,0,0,.88) 100%)}
-.gs-vs-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.76;transform:scale(1.025);transition:transform 1.1s cubic-bezier(.2,.7,.2,1),opacity .6s ease}
-.gs-vs-card:hover{border-color:rgba(142,213,255,.72);box-shadow:0 18px 55px rgba(0,0,0,.34)}
-.gs-vs-card:hover img{transform:scale(1.09);opacity:.94}
-.gs-vs-card-content{position:absolute;z-index:2;left:20px;right:20px;bottom:19px}
-.gs-vs-card h3{font-size:19px;line-height:1.2;letter-spacing:-.025em;color:#fff;margin:0 0 6px}
-.gs-vs-card p{font-size:13px;line-height:1.45;color:rgba(255,255,255,.76);margin:0}
-.gs-vs-card .gs-vs-index{display:block;color:#9edfff;font-size:10px;letter-spacing:.18em;margin-bottom:8px}
-@media(max-width:900px){.gs-vs-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.gs-vs-card{min-height:230px}.gs-vs-card-content{left:15px;right:15px;bottom:15px}}
-@media(max-width:520px){.gs-visual-services{padding:58px 16px}.gs-vs-grid{grid-template-columns:1fr}.gs-vs-card{min-height:245px}.gs-vs-title{font-size:34px}}
-@media(prefers-reduced-motion:reduce){.gs-vs-card,.gs-vs-card img{transition:none;filter:none;transform:none}.gs-vs-card{opacity:1}}
+
+/* Integrated service photography — kept inside the original Services section */
+#services{position:relative;isolation:isolate;background:#050505}
+#services .sv-media{height:104px;margin:0 0 20px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.17);border-radius:10px;background:#0b0c0d}
+#services .sv-media:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,0) 48%,rgba(5,5,5,.42) 100%);box-shadow:inset 0 0 22px rgba(255,255,255,.035)}
+#services .sv-media img{display:block;width:100%;height:100%;object-fit:cover;opacity:0;filter:saturate(.78) contrast(.96);transform:scale(1.045);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.7,.2,1),filter .6s ease}
+#services .sv.in .sv-media img{opacity:.78;transform:scale(1);filter:saturate(.84) contrast(1)}
+#services .sv:hover .sv-media img{opacity:.98;transform:scale(1.07);filter:saturate(1) contrast(1.02)}
+#services .sv-media img:focus{outline:2px solid #9edfff;outline-offset:-3px}
+@media(max-width:560px){#services .sv-media{height:132px;margin-bottom:16px}}
+@media(prefers-reduced-motion:reduce){#services .sv-media img{opacity:.82;transform:none;transition:none}}
+
 </style>
 </head>
 <body>
@@ -281,14 +271,14 @@ html,body{max-width:100%;overflow-x:clip}
 <div class="sh"><div class="rv"><div class="k">What we do</div><h2>Creative work.<br><b>Digital results.</b></h2></div>
 <p class="rv">From the first idea to the final click &mdash; the creative and digital services your Hyderabad business needs to get noticed, trusted and chosen.</p></div>
 <div class="grid">
-<article class="sv rv"><div class="n">01</div><h4>Ideas that stop the scroll</h4><h3>Advertising</h3><p>Campaign concepts and promotional creatives that make your brand impossible to ignore.</p></article>
-<article class="sv rv" style="--d:.08s"><div class="n">02</div><h4>Identities people remember</h4><h3>Branding</h3><p>Logos, visual direction and brand systems that stay consistent on every platform.</p></article>
+<article class="sv rv"><div class="sv-media" data-service-image="01"><img src="https://images.pexels.com/photos/39598359/pexels-photo-39598359.jpeg" alt="Advertising campaign creative" loading="lazy" decoding="async"></div><div class="n">01</div><h4>Ideas that stop the scroll</h4><h3>Advertising</h3><p>Campaign concepts and promotional creatives that make your brand impossible to ignore.</p></article>
+<article class="sv rv" style="--d:.08s"><div class="sv-media" data-service-image="02"><img src="https://images.pexels.com/photos/10142683/pexels-photo-10142683.jpeg" alt="Brand identity and visual branding" loading="lazy" decoding="async"></div><div class="n">02</div><h4>Identities people remember</h4><h3>Branding</h3><p>Logos, visual direction and brand systems that stay consistent on every platform.</p></article>
 <article class="sv rv" style="--d:.16s"><div class="n">03</div><h4>Pixels with a point of view</h4><h3>Graphic Design</h3><p>Standout design for social media, print, packaging, promotions and business communication.</p></article>
-<article class="sv rv" style="--d:.24s"><div class="n">04</div><h4>Frames that sell</h4><h3>Photography</h3><p>Product, brand, business and campaign photography with a creative eye.</p></article>
-<article class="sv rv"><div class="n">05</div><h4>Get talked about</h4><h3>Publicity &amp; PR</h3><p>Smart publicity and public-relations communication that puts your brand in front of the right audience.</p></article>
-<article class="sv rv" style="--d:.08s"><div class="n">06</div><h4>Reach. Click. Repeat.</h4><h3>Digital Marketing</h3><p>Content-led digital campaigns built for visibility, engagement and growth.</p></article>
-<article class="sv rv" style="--d:.16s"><div class="n">07</div><h4>Built to launch fast</h4><h3>Website &amp; App Development</h3><p>Responsive, SEO-friendly websites and app experiences designed around your goals.</p></article>
-<article class="sv rv" style="--d:.24s"><div class="n">08</div><h4>Stories on repeat</h4><h3>Content Creation</h3><p>Scripts, visuals and posts that keep your social media, website and campaigns alive.</p></article>
+<article class="sv rv" style="--d:.24s"><div class="sv-media" data-service-image="04"><img src="https://images.pexels.com/photos/38059010/pexels-photo-38059010.jpeg" alt="Cinema camera for documentaries, brand films and advertisements" loading="lazy" decoding="async"></div><div class="n">04</div><h4>Frames that sell</h4><h3>Photography &amp; Cinematic Production</h3><p>Documentaries, brand films, advertisements and campaign photography.</p></article>
+<article class="sv rv"><div class="sv-media" data-service-image="05"><img src="https://images.pexels.com/photos/18280160/pexels-photo-18280160.jpeg" alt="Newspaper publicity and media coverage" loading="lazy" decoding="async"></div><div class="n">05</div><h4>Get talked about</h4><h3>Publicity &amp; PR</h3><p>Smart publicity and public-relations communication that puts your brand in front of the right audience.</p></article>
+<article class="sv rv" style="--d:.08s"><div class="sv-media" data-service-image="06"><img src="https://images.pexels.com/photos/6168/hands-woman-laptop-notebook.jpg" alt="Digital marketing and online campaign planning" loading="lazy" decoding="async"></div><div class="n">06</div><h4>Reach. Click. Repeat.</h4><h3>Digital Marketing</h3><p>Content-led digital campaigns built for visibility, engagement and growth.</p></article>
+<article class="sv rv" style="--d:.16s"><div class="sv-media" data-service-image="07"><img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" alt="Website development and digital experience" loading="lazy" decoding="async"></div><div class="n">07</div><h4>Built to launch fast</h4><h3>Website &amp; App Development</h3><p>Responsive, SEO-friendly websites and app experiences designed around your goals.</p></article>
+<article class="sv rv" style="--d:.24s"><div class="sv-media" data-service-image="08"><img src="https://images.pexels.com/photos/9040531/pexels-photo-9040531.jpeg" alt="Content creation and production" loading="lazy" decoding="async"></div><div class="n">08</div><h4>Stories on repeat</h4><h3>Content Creation</h3><p>Scripts, visuals and posts that keep your social media, website and campaigns alive.</p></article>
 </div><div class="book-strip rv"><div><b>Have a project in mind?</b><p>Talk it through with us in a free 30-minute consultation.</p></div><a class="btn o book-inline" href="/book">Book a Call <span aria-hidden="true">↗</span></a></div></div></section>
 
 <section id="mike"><div class="wrap">
@@ -369,22 +359,7 @@ html,body{max-width:100%;overflow-x:clip}
 </div></section>
 </main>
 
-<footer><div class="wrap fr"><div><b style="color:#fff;font-size:20px">Greystudio.</b></div><div>&copy; <span id="yr"></span> Greystudio. Advertising, Branding &amp; Digital Studio in Hyderabad.</div><div>Hyderabad, Telangana &ndash; 500077</div><div><b style="display:block;color:#fff;margin-bottom:8px">Quick Links</b><div class="footer-links"><a href="#services">Services</a><a href="#contact">Contact</a><a href="/book">Book a Call</a></div></div></div><section class="gs-visual-services" id="creative-services-visuals" aria-labelledby="gs-vs-title">
-  <div class="gs-vs-head">
-    <span class="gs-vs-eyebrow">GREYSTUDIO · CREATIVE & DIGITAL</span>
-    <h2 class="gs-vs-title" id="gs-vs-title">Ideas deserve to be seen.</h2>
-    <p class="gs-vs-copy">From cinematic brand stories to digital experiences, we create the visuals and tools that help businesses stand out.</p>
-  </div>
-  <div class="gs-vs-grid">
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/38059010/pexels-photo-38059010.jpeg" alt="Professional cinema camera for documentary and commercial production" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">01 / PRODUCTION</span><h3>Cinematic Production</h3><p>Documentaries, brand films and advertisements.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/39598359/pexels-photo-39598359.jpeg" alt="Creative advertising campaign visual" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">02 / CAMPAIGNS</span><h3>Advertising</h3><p>Campaigns designed to capture attention.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/10142683/pexels-photo-10142683.jpeg" alt="Premium brand identity and printed branding" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">03 / IDENTITY</span><h3>Branding</h3><p>Build a clear, memorable brand identity.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/18280160/pexels-photo-18280160.jpeg" alt="Woman reading a newspaper, representing media publicity" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">04 / VISIBILITY</span><h3>Publicity</h3><p>Media presence, PR and brand visibility.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/6168/hands-woman-laptop-notebook.jpg" alt="Digital marketing work on a laptop" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">05 / GROWTH</span><h3>Digital Marketing</h3><p>Grow reach, engagement and qualified leads.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg" alt="Website development and digital interface work" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">06 / DIGITAL</span><h3>Website Development</h3><p>Fast, modern and search-ready websites.</p></div></article>
-    <article class="gs-vs-card"><img src="https://images.pexels.com/photos/9040531/pexels-photo-9040531.jpeg" alt="Content creator producing visual content" loading="lazy" decoding="async"><div class="gs-vs-card-content"><span class="gs-vs-index">07 / STORYTELLING</span><h3>Content Creation</h3><p>Photos, videos and social-first content.</p></div></article>
-  </div>
-</section>
+<footer><div class="wrap fr"><div><b style="color:#fff;font-size:20px">Greystudio.</b></div><div>&copy; <span id="yr"></span> Greystudio. Advertising, Branding &amp; Digital Studio in Hyderabad.</div><div>Hyderabad, Telangana &ndash; 500077</div><div><b style="display:block;color:#fff;margin-bottom:8px">Quick Links</b><div class="footer-links"><a href="#services">Services</a><a href="#contact">Contact</a><a href="/book">Book a Call</a></div></div></div>
 </footer>
 
 <a class="book-float" href="/book" aria-label="Book a 30-minute call">Book a Call ↗</a>
@@ -479,8 +454,6 @@ function solve(s){
   const fout=ss(clamp(((footY-s)/vh-.7)/.3,0,1));
   const fa=fTop-s, fb=fBot-s, fnd=1-ss(clamp((vh*.95-fa)/(vh*.3),0,1))*ss(clamp((fb-vh*.05)/(vh*.3),0,1));  // 0 while the Founder section is on screen
   tgt.op=lerp(A.op,B.op,t)*(1-.85*ss(clamp((raw-.12)/.28,0,1))*ss(clamp((.88-raw)/.28,0,1)))*fin*fout*fnd;
-  const activeRange=m>=S.top+vh*.12 && s<footY-vh*.7 && !(fa<vh*.95 && fb>vh*.05);
-  if(activeRange)tgt.op=Math.max(tgt.op,mobile()?.88:1);
   // highlight the service card nearest the middle (cached positions, no layout reads)
   if(s+vh>svcTop && s<svcBot){let best=0,bd=1e9;for(let k=0;k<cardMid.length;k++){const d=Math.abs(cardMid[k]-m);if(d<bd){bd=d;best=k}}
     if(best!==activeCard){if(cards[activeCard])cards[activeCard].classList.remove('is-active');cards[best].classList.add('is-active');activeCard=best}}
@@ -560,6 +533,7 @@ async function init(){
   model.position.sub(c); const pivot=new THREE.Group(); pivot.add(model); pivot.scale.setScalar(1/h); group.add(pivot);
   document.documentElement.classList.add('has3d');
   window.__greystudio3dReady&&window.__greystudio3dReady();
+  window.__greystudio3dReady&&window.__greystudio3dReady();
   measure(); start();
 }
 function boot(){const go=()=>init().catch(e=>{console.warn('Greystudio 3D unavailable, static fallback.',e);document.documentElement.classList.add('no3d');dispose()});
@@ -576,9 +550,6 @@ addEventListener('load',()=>setTimeout(()=>remeasure(true),400));
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>remeasure(true));
 document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
 addEventListener('pagehide',dispose);
-</script>
-<script id="gs-service-visuals-js">
-(()=>{const cards=document.querySelectorAll('.gs-vs-card');if(!cards.length)return;if(!('IntersectionObserver'in window)){cards.forEach(c=>c.classList.add('is-visible'));return}const io=new IntersectionObserver(entries=>entries.forEach(entry=>{entry.target.classList.toggle('is-visible',entry.isIntersecting)}),{threshold:.14,rootMargin:'0px 0px -5% 0px'});cards.forEach((card,i)=>{card.style.transitionDelay=(i%4)*90+'ms';io.observe(card)})})();
 </script>
 </body>
 </html>
