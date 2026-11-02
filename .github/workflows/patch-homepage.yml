@@ -1,39 +1,4 @@
-name: Patch GreyStudio homepage
+name: Retired homepage auto-patcher
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - "index.html"
-      - "Greystudio_v4.html"
-      - "Greystudio_v4_booking_integrated.html"
-      - "scripts/patch_homepage.py"
-      - ".github/workflows/patch-homepage.yml"
-  workflow_dispatch:
-
-permissions:
-  contents: write
-
-jobs:
-  patch-homepage:
-    if: ${{ !contains(github.event.head_commit.message, '[auto-patched]') }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out main
-        uses: actions/checkout@v4
-        with:
-          ref: main
-          persist-credentials: true
-      - name: Apply the homepage fixes
-        run: python3 scripts/patch_homepage.py
-      - name: Commit and push the patched homepage
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html Greystudio_v4.html Greystudio_v4_booking_integrated.html
-          if git diff --cached --quiet; then
-            echo "No homepage changes required."
-          else
-            git commit -m "Apply GreyStudio 3D character and spacing fixes [auto-patched]"
-            git push origin HEAD:main
-          fi
+# Intentionally disabled. Homepage fixes must be reviewed and committed directly
+# so the published index.html cannot be silently rewritten by a workflow.
