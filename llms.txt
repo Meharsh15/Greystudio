@@ -1,32 +1,24 @@
 # GreyStudio
 
-> GreyStudio is a creative and digital studio based in Hyderabad, Telangana, India.
+> GreyStudio is a Hyderabad, Telangana-based local marketing and creative studio helping brands build regional visibility through on-ground activations, creative production and creator partnerships.
 
 ## Website
 - Homepage: https://www.greystudio.online/
-- Dedicated booking page: https://www.greystudio.online/book
+- Booking: https://www.greystudio.online/book
 
-## Book a consultation
-- Book a free 30-minute consultation: https://www.greystudio.online/book
-- The existing booking page contains the Calendly scheduling embed.
-- The homepage links to the dedicated booking page and does not duplicate the Calendly widget.
+## Local marketing and creative services
+- Local brand activation and retail marketing: WPC foam boards, standees, retail displays, dealer promotions and on-ground campaign execution.
+- Advertising and creative production: advertisement shoots, product photography, promotional videos, reels and campaign assets.
+- Influencer and creator collaborations: local creators, Telugu influencers, regional YouTubers, creator discovery and campaign coordination.
+- Print and retail collateral: pamphlets, flyers, brochures, catalogues and branded promotional materials.
+- Branding and design: brand identity, graphic design, social media creatives and campaign communication.
+- Websites and apps: responsive, search-friendly websites and business app experiences.
+
+## Location and coverage
+- Based in Hyderabad, Telangana, India.
+- Supports local and regional campaigns.
 
 ## Contact
 - WhatsApp: https://wa.me/916281256601
 - Phone: +91 62812 56601
-
-## Services
-- Advertising
-- Branding
-- Graphic design
-- Photography
-- Publicity and PR
-- Digital marketing
-- Website and app development
-- Content creation
-
-## Location
-- Hyderabad, Telangana, India
-
-For project enquiries or consultation scheduling, use:
-https://www.greystudio.online/book
+- Book a consultation: https://www.greystudio.online/book
